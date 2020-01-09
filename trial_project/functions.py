@@ -9,6 +9,8 @@ from scipy import signal
 from scipy.fftpack import fft
 from file_handler import *
 
+"""Module for several functions"""
+
 
 def get_folder_name(file_name):
     """Extracts the name of a trial from the foldername. From format: YYYY_MM_DD_hh_mm_ss_'folder_name'

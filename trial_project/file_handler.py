@@ -9,14 +9,14 @@ logger = logging.getLogger(__name__)
 
 def scan_folder(folder, postfix):
     """scans folder for files ended with the specified postfix
-
-    Arguments:
-        folder {str} -- path to choosen folder
-        postfix {str} -- postfix of files or filetypes e.g. ".txt" or "_data.txt"
-
-    Returns:
-        list -- list of str of filedirectory
-    """
+    
+    :param folder: path to choosen folder
+    :type folder: str
+    :param postfix: postfix of files of filetypes e.g. ".txt" or "_data.csv"
+    :type postfix: str
+    :return: list of str of founded file directorys
+    :rtype: list
+    """    
     file_dir = list()
     folder_dir = list()
 

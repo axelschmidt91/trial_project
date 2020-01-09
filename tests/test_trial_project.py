@@ -3,6 +3,7 @@
 """Tests for `trial_project` package."""
 
 import pytest
+import unittest
 
 from click.testing import CliRunner
 
@@ -35,3 +36,13 @@ def test_command_line_interface():
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output
+
+
+class TestCalc(unittest.TestCase):
+    def test_add(self):
+        result = calc.add(10, 5)
+        self.assertEqual(result, 15)
+
+
+if __name__ == "__main__":
+    unittest.main()

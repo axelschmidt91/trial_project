@@ -12,14 +12,12 @@ from file_handler import *
 
 def get_folder_name(file_name):
     """Extracts the name of a trial from the foldername. From format: YYYY_MM_DD_hh_mm_ss_'folder_name'
-
-    Arguments:
-        file_name {list,str} -- path str or list of path str of file/s 
-
-    Returns:
-        folder_name {list, str} -- type depending on argument type. Extracted trial names of folder/s
-    """
-
+    
+    :param file_name: path str or list of path str of file/s 
+    :type file_name: list,str
+    :return: type depending on argument type. Extracted trial names of folder/s
+    :rtype: list, str
+    """    
     if isinstance(file_name, list):
         folder_name = list()
 
@@ -141,18 +139,13 @@ def time_in_out_width_file(data):
 
 
 def import_pre_process(file_path):
-    '''imports from `file_path` and converts input into a numpy array.
-
-    Parameters
-    ----------
-    file_path : str
-        complete string to file location that should be loaded. Necassary
-
-    Returns
-    -------
-        ndarray (2D) with the data in the input file. Each row is a meassurement point.
-    '''
-
+    """imports from `file_path` and converts input into a numpy array.
+    
+    :param file_path: complete string to file location that should be loaded. Necassary
+    :type file_path: str
+    :return: ndarray (2D) with the data in the input file. Each row is a meassurement point.
+    :rtype: ndarray
+    """
     lines = np.loadtxt(file_path, dtype=str, comments="#",
                        delimiter="\t", unpack=False)
 
@@ -170,50 +163,23 @@ def import_pre_process(file_path):
 
 
 def reduction(data, reduced_factor, red_type='mean'):
-    ''' Reduce the data by every the `reduced_factor`
-
-    Parameters
-    ----------
-    data : ndarray
-        which should be converted
+    """Reduce the data by every the `reduced_factor`
+    
+    :param data: which should be converted
         (Necessary)
-    reduced_factor : int
-        How many rows (measurement points) should be computed together
-    red_type : str
-        Type by which the reduction should be done.
+    :type data: ndarray
+    :param reduced_factor: How many rows (measurement points) should be computed together
+    :type reduced_factor: int
+    :param red_type: Type by which the reduction should be done.
         Available:
             'max': returns the max value of the `reduced_factor` compared measurement points.
             'min': returns the min value of the `reduced_factor` compared measurement points.
-            'mean': returns the mean value of the `reduced_factor` compared measurement points.
-        (Optional, Default: 'mean')
-
-    Returns
-    -------
-    ndarray
-        test
-    '''    ''' Reduce the data by every the `reduced_factor`
-
-    Parameters
-    ----------
-    data : ndarray
-        which should be converted
-        (Necessary)
-    reduced_factor : int
-        How many rows (measurement points) should be computed together
-    red_type : str
-        Type by which the reduction should be done.
-        Available:
-            'max': returns the max value of the `reduced_factor` compared measurement points.
-            'min': returns the min value of the `reduced_factor` compared measurement points.
-            'mean': returns the mean value of the `reduced_factor` compared measurement points.
-        (Optional, Default: 'mean')
-
-    Returns
-    -------
-    ndarray
-        test
-    '''
-
+            'mean': returns the mean value of the `reduced_factor` compared measurement points., defaults to 'mean'
+    :type red_type: str, optional
+    :raises ValueError: if no valid 'red_type' was choosen, a ValueError will be raised.
+    :return: reduced Data
+    :rtype: ndarray
+    """
     print('reduction type: ' + red_type)
     print('Reduce Data')
     step_size = reduced_factor

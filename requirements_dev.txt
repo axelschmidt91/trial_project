@@ -11,3 +11,4 @@ Click==7.0
 pytest==5.3.2
 pytest-runner==5.2
 sphinx==2.3.1
+sphinx-glpi-theme==0.3

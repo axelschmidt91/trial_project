@@ -103,3 +103,6 @@ ENV/
 
 # IDE settings
 .vscode/
+
+# SSH Keys
+github_ssh_key*

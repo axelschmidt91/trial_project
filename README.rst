@@ -6,7 +6,7 @@ Trial Project
 .. image:: https://img.shields.io/pypi/v/trial_project.svg
         :target: https://pypi.python.org/pypi/trial_project
 
-.. image:: https://img.shields.io/travis/axelschmidt91/trial_project.svg
+.. image:: https://travis-ci.com/axelschmidt91/trial_project.svg?branch=master
         :target: https://travis-ci.com/axelschmidt91/trial_project
 
 .. image:: https://readthedocs.org/projects/trial-project/badge/?version=latest

@@ -7,7 +7,7 @@ Trial Project
         :target: https://pypi.python.org/pypi/trial_project
 
 .. image:: https://img.shields.io/travis/axelschmidt91/trial_project.svg
-        :target: https://travis-ci.org/axelschmidt91/trial_project
+        :target: https://travis-ci.com/axelschmidt91/trial_project
 
 .. image:: https://readthedocs.org/projects/trial-project/badge/?version=latest
         :target: https://trial-project.readthedocs.io/en/latest/?badge=latest

@@ -1,2 +1,0 @@
-Click>=7.0
-sphinx_glpi_theme>=0.3

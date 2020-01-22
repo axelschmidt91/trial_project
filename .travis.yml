@@ -18,3 +18,4 @@ deploy:
     tags: true
     repo: axelschmidt91/trial_project
     python: 3.8
+after_success: coveralls

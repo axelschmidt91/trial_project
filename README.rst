@@ -13,10 +13,13 @@ Trial Project
         :target: https://trial-project.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
 .. image:: https://pyup.io/repos/github/axelschmidt91/trial_project/shield.svg
      :target: https://pyup.io/repos/github/axelschmidt91/trial_project/
      :alt: Updates
+     
+.. image:: https://coveralls.io/repos/github/axelschmidt91/trial_project/badge.svg?branch=master
+    :target: https://coveralls.io/github/axelschmidt91/trial_project?branch=master
+
 
 
 
